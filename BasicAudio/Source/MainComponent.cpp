@@ -37,7 +37,7 @@ public:
             gainSliders[i].setTextBoxIsEditable(false);
             gainSliders[i].addListener(this);
         }
-        // configuring frequency slider and adding it to the main window
+        // configuring frequency slider which controls base frequency
         addAndMakeVisible (frequencySlider);
         frequencySlider.setRange (50.0, 5000.0);
         frequencySlider.setSkewFactorFromMidPoint (500.0);
@@ -54,7 +54,7 @@ public:
         frequencyLabel.setColour(Label::ColourIds::textColourId, Colour::fromRGB(193, 193, 217));
         frequencyLabel.attachToComponent (&frequencySlider, true);
         
-        // configure ratio slider and add it to main window
+        // configure ratio slider which controls the ratio between harmonics
         addAndMakeVisible (ratioSlider);
         ratioSlider.setRange (1.0, 2.0);
         ratioSlider.setSliderStyle(Slider::SliderStyle::RotaryHorizontalVerticalDrag);
@@ -68,7 +68,7 @@ public:
         ratioLabel.setColour(Label::ColourIds::textColourId, Colour::fromRGB(193, 193, 217));
         ratioLabel.attachToComponent (&ratioSlider, true);
         
-        // configure gain slider and add it to main window
+        // configure gain slider which controls overall gain of synthesizer 
         
         addAndMakeVisible(masterGainSlider);
         masterGainSlider.setRange(0.0, 1.0);
